@@ -208,7 +208,51 @@ The Create and Edit pages needed to be properly styled to match the theme of the
 The Edit page was modified in the same way.
 
 ### Display Cards
+When the Entity Model was first created the production items were arranged in a list that was visually unappealing and did not match the theme of the website. I was tasked with making all created productions display on the Index page as cards. When clicked you would be directed to the details page. Hovering your mouse over the cards also revealed an Edit and Delete button that would take you to the appropriate pages.
+```
+@model IEnumerable<TheatreCMS3.Areas.Prod.Models.Production>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
+<link rel="stylesheet" type="text/css" href="~/Content/Areas/Prod.css" />
+
+<h2>Productions</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-default cms-bg-secondary create-edit-button" })
+</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="card card-group bg-dark m-2 col-sm-auto text-center shadow" style="width: 16rem; height: 18rem;">             
+                
+                <img src="~/Content/images/theater.jpg" class="card-img-top prod-index-card-img" alt="No picture in ProductionPhotos" /><!--No ProductionsPhoto Model. Using sample image -->
+                
+                <div class="card-img-overlay d-inline-flex prod-overlay-pill">
+                    <h3 class="ml-auto mr-1">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductionId }, new { @class = "badge badge-pill cms-bg-secondary cms-text-light card-stretchlink-text" })
+                    </h3>
+                    <h3 class="mr-auto ml-1">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductionId }, new { @class = "badge badge-pill cms-bg-main cms-text-light card-stretchlink-text" })
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title card-stretchlink-text production-card-title-overflow my-auto">
+                        @Html.ActionLink(item.Title, "Details", new { id = item.ProductionId }, new { @class = "stretched-link cms-text-light card-stretchlink-text text-decoration-none" })
+                    </h5>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+```
+Bootstrap and a custom CSS file was used to accomplish the card display.
 
 *Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Conclusion](#conclusion)
 
