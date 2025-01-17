@@ -85,7 +85,7 @@ namespace TheatreCMS3.Areas.Prod.Controllers
             return View(production);
         }
 
-//Continued with Edit and Detail Functions.. 
+//Continued with Edit and Delete Functions.. 
 ```
 
 ### Search Bar
@@ -147,8 +147,68 @@ The Index.cshtml View needed to be modified as well:
 - [Display Cards](#display-cards)
 
 ### Styled Donations Page
+
+
 ### Styled Create and Edit Pages
+The Create and Edit pages needed to be properly styled to match the theme of the website. The Entity Framework default links were changed to buttons and flexbox was used to position the check boxes and buttons.
+```
+@model TheatreCMS3.Areas.Prod.Models.Production
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/Areas/Prod.css" />
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+ 
+<div class="container-fluid cms-bg-secondary p-4 mt-4 container-radius">
+
+    <div class="form-vertical container-flex m-2 p-2 container-radius cms-bg-main">
+        <h3 class="mt-2 ml-3 broadway-font">Create Production</h3>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-primary" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control border-color", @placeholder = "What is the name of the play?", required = "" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-primary" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control border-color", @placeholder = "Please enter a brief description"} })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-primary" })
+            </div>
+        </div>
+
+        //Continued for the rest of the Model Properties
+
+        <div class="form-group d-flex btn-group justify-content-center">
+            <div>
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-lg bg-dark text-white" })
+                <input type="submit" value="Create" class="btn btn-lg cms-bg-secondary ml-3 create-edit-button" />
+            </div>
+        </div>
+
+    </div>
+</div>
+}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+```
+The Edit page was modified in the same way.
+
 ### Display Cards
+
 
 *Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Conclusion](#conclusion)
 
