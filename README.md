@@ -142,12 +142,8 @@ The Index.cshtml View needed to be modified as well:
 *Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Conclusion](#conclusion)
 
 ## Front End Stories
-- [Styled Donations Page](#styled-donations-page)
 - [Styled Create and Edit Pages](#styled-create-and-edit-pages)
 - [Display Cards](#display-cards)
-
-### Styled Donations Page
-
 
 ### Styled Create and Edit Pages
 The Create and Edit pages needed to be properly styled to match the theme of the website. The Entity Framework default links were changed to buttons and flexbox was used to position the check boxes and buttons.
