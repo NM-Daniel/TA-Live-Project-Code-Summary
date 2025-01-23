@@ -139,7 +139,7 @@ The Index.cshtml View needed to be modified as well:
 }
 //...
 ```
-*Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Conclusion](#conclusion)
+*Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Gallery](#gallery), [Conclusion](#conclusion)
 
 ## Front End Stories
 - [Styled Create and Edit Pages](#styled-create-and-edit-pages)
@@ -250,9 +250,15 @@ When the Entity Model was first created the production items were arranged in a 
 ```
 Bootstrap and a custom CSS file was used to accomplish the card display.
 
-*Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Conclusion](#conclusion)
+*Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Gallery](#gallery), [Conclusion](#conclusion)
+
+## Gallery
+
+![Productions_page](https://github.com/user-attachments/assets/982cf475-ae5c-4e1c-a6f1-2af4cd6123a3)
+
+![Create_page](https://github.com/user-attachments/assets/d5012640-c6b0-46af-bc64-7ebef60729b5)
 
 ## Conclusion
-During the course of my Live Project, I learned valuable skills as a developer and a problem solver. I enjoyed the collaboration and team aspect of the daily standups. I found myself messaging with the other developers to see what they were working on and what their strategies were as well as telling them about what I was working on. It was a great exercise in communication. During the daily standups we were all required to report our progress, our needs, and our plan for the day. The instructors and other developers were very helpful and it was clearly a team-oriented group.
+During the course of my Live Project, I learned valuable skills as a developer and a problem solver. I enjoyed the collaboration and team aspect of the daily standups. I found myself messaging with the other developers to see what they were working on and what their strategies were as well as telling them about what I was working on. It was a great exercise in communication. During the daily standups we were all required to report our progress, our needs, and our plan for the day. The instructors and other developers were very helpful and it was clearly a team-oriented group. It was a great exercise in collaboration and problem solving.
 
-*Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories)
+*Jump to:* [Introduction](#introduction), [Back End Stories](#back-end-stories), [Front End Stories](#front-end-stories), [Gallery](#gallery)
